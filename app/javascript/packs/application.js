@@ -3,10 +3,10 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 import 'bootstrap';
-require jquery-ui
-require jquery3
-require popper
-require bootstrap
+//require 'jquery-ui'
+//require jquery3
+//require popper
+//require bootstrap
 require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
