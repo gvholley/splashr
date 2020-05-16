@@ -1,3 +1,4 @@
+
 <div class="row">
   <div class="card col-lg-3">
     <div class="card-body">
@@ -6,27 +7,35 @@
     </div>
 
 
-
    <div class="card col-lg-6">
+    <%= render '/components/post_form' %>
     <% for @p in @posts %>
-    <div class="card-body">
-    <p><%= @p.content %></p>
+    <div class="post-card">
+    <div class="card-body row">
+      <div class="col-sm-1">
+        <img src="https://via.placeholder.com/40">
       </div>
+      <div class="col-sm-11">
+        <p class="post-title"><span class="post-owner"><%= User.find(@p.user_id).username %></span> - <span class="post-time"><%= @p.created_at.to_formatted_s(:short) %></span></p>
+    <p class="post-content"><%= @p.content %></p>
+  </div>
+  <div class="col-sm-12">
+        <p class="post-links">LINKS</p>
+      </div>
+
+      </div>
+    </div>
       <% end %>
     </div>
-
-
 
   <div class="card col-lg-3">
     <div class="card-body">
     <p>About</p>
       </div>
     </div>
-
-  <div class="card col-lg-3 mt-2">
-    <div class="card-body">
-    <p>Trends</p>
-      </div>
-    </div>
 </div>
+
+
+
+
 
