@@ -1,0 +1,13 @@
+<%= simple_form_for(@newPost) do |f| %>
+
+<center>
+  <div class="form-inputs">
+    <%= f.label :content %>
+    <%= f.text_field :content, autofocus: true %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Add Post" %>
+  </div>
+<% end %>
+</center>

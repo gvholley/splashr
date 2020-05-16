@@ -1,42 +1,45 @@
 <div class="row">
   <div class="col-lg-12">
-  <div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">Profile banner</h1>
-    <p class="lead">Placeholder text</p>
-  </div>
-</div>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Profile banner</h1>
+        <p class="lead">Placeholder text</p>
+      </div>
+    </div>
   </div>
 </div>
 
 <div class="row">
   <div class="card col-lg-3">
     <div class="card-body">
-    <p>Stats</p>
-      </div>
+      <p>Stats</p>
     </div>
+  </div>
 
 
 
   <div class="card col-lg-6">
+    <%= render "/components/post_form" %>
+    <% for @p in @posts %>
     <div class="card-body">
-    <p>Feed</p>
-      </div>
+      <p><%= @p.content %></p>
     </div>
+    <% end %>
+  </div>
+
 
 
   <div class="card col-lg-3">
     <div class="card-body">
-    <p>About</p>
-      </div>
+      <p>About</p>
     </div>
+  </div>
 
   <div class="card col-lg-3 offset-lg-9 mt-2">
     <div class="card-body">
-    <p>Trends</p>
-      </div>
+      <p>Trends</p>
     </div>
-
+  </div>
 </div>
 
 
