@@ -119,6 +119,23 @@ color: linear-gradient(90deg, rgba(0,100,148,1) 0%, rgba(5,130,202,1) 0%, rgba(0
 text-decoration: none;
 }
 
+.names {
+color: rgb(2,128,144);
+color: linear-gradient(90deg, rgba(2,128,144,1) 0%, rgba(0,168,150,1) 0%, rgba(2,195,154,1) 100%);
+font-weight: bold;
+line-height: 380%;
+padding: 4px;
+font-size: 60%;
+margin-left: 15px;
+
+}
+
+.names:hover {
+color: rgb(0,100,148);
+color: linear-gradient(90deg, rgba(0,100,148,1) 0%, rgba(5,130,202,1) 0%, rgba(0,166,251,1) 100%);
+text-decoration: none;
+}
+
 .description {
 font-weight: lighter;
 font-size: 80%;
@@ -185,5 +202,15 @@ h2 .white-h2 {
   font-size: 175%;
   color: rgb(2,128,144);
 color: linear-gradient(90deg, rgba(2,128,144,1) 0%, rgba(0,168,150,1) 0%, rgba(2,195,154,1) 100%);
-margin-top: -11px;
+  margin-top: -11px;
+}
+
+#fishy {
+
+  color: rgb(2,128,144);
+color: linear-gradient(90deg, rgba(2,128,144,1) 0%, rgba(0,168,150,1) 0%, rgba(2,195,154,1) 100%);
+}
+
+#navicons {
+  margin-right: 4px;
 }
