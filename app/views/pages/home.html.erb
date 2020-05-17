@@ -2,38 +2,68 @@
 <div class="row">
   <div class="card col-lg-3">
     <div class="card-body">
-    <p>Stats</p>
-      </div>
+      <p class="title">Trends</p>
+      <a class="follow-me" href=#>#Sashimi</a><br>
+      <p class="description">32.3k splashes today</p>
+      <a class="follow-me" href=#>Edo Bay</a><br>
+      <p class="description">19.8k splashes today</p>
+      <a class="follow-me" href=#>#FishFacts</a><br>
+      <p class="description">10k splashes today</p>
+      <a class="follow-me" href=#>#TheGillLife</a><br>
+      <p class="description">4.9k splashes today</p>
+      <a class="follow-me" href=#>#SeaBassSunday</a><br>
+      <p class="description">3.2k splashes today</p>
     </div>
+  </div>
 
 
-   <div class="card col-lg-6">
+  <div class="card col-lg-6">
     <%= render '/components/post_form' %>
     <% for @p in @posts %>
     <div class="post-card">
-    <div class="card-body row">
-      <div class="col-sm-1">
-        <img src="https://via.placeholder.com/40">
-      </div>
-      <div class="col-sm-11">
-        <p class="post-title"><span class="post-owner"><%= User.find(@p.user_id).username %></span> - <span class="post-time"><%= @p.created_at.to_formatted_s(:short) %></span></p>
-    <p class="post-content"><%= @p.content %></p>
-  </div>
-  <div class="col-sm-12">
-        <p class="post-links">LINKS</p>
-      </div>
+      <div class="card-body row">
+        <div class="col-sm-1">
+          <div class="avatar">
+            <i class="fas fa-fish"></i>
+          </div>
+        </div>
+        <div class="col-sm-11">
+          <a href="/user/<%= User.find(@p.user_id).username %>" class="post-title"><span class="post-owner"><%= User.find(@p.user_id).username %></span> - <span class="post-time"><%= @p.created_at.to_formatted_s(:short) %></span></a>
+          <p class="post-content"><%= @p.content %></p>
+        </div>
+        <div class="col-sm-12">
+          <p class="post-links">
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-retweet"></i>
+            <i class="fas fa-reply"></i>
+          </p>
+        </div>
 
       </div>
     </div>
-      <% end %>
-    </div>
+    <% end %>
+  </div>
 
   <div class="card col-lg-3">
     <div class="card-body">
-    <p>About</p>
+      <p class="title">Who to follow</p>
+        <div class="avatar">
+          <i class="fas fa-fish"></i><a class="follow-me" href="/user/TokyoJoe">TokyoJoe</a><br>
+        </div>
+                <div class="avatar">
+          <i class="fas fa-fish"></i><a class="follow-me" href="/user/Kaoringo">Kaoringo</a><br>
+        </div>
+                <div class="avatar">
+          <i class="fas fa-fish"></i><a class="follow-me" href="/user/RainyDay">RainyDay</a><br>
+        </div>
+    </div>
+  </div>
+  <div class="col-sm-12">
+    <p class="footer-links">
+      Terms  Privacy  Cookies   More   © 2020 Splashr
+      <p>
       </div>
     </div>
-</div>
 
 
 
